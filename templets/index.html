@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🎬 Movie Ticket Booking</h1>
+<h3>Select a movie to book tickets</h3>
+
+<ul>
+    {% for movie in movies %}
+        <li>
+            <a href="/book/{{ movie.id }}">{{ movie.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
